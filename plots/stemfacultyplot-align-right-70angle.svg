@@ -36,16 +36,16 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="3840"
-     inkscape:window-height="2106"
+     inkscape:window-height="2018"
      id="namedview11202"
      showgrid="false"
-     inkscape:zoom="3.4962963"
-     inkscape:cx="194.72587"
-     inkscape:cy="350.92751"
-     inkscape:window-x="-16"
+     inkscape:zoom="1.7481482"
+     inkscape:cx="-56.487325"
+     inkscape:cy="407.65425"
+     inkscape:window-x="3824"
      inkscape:window-y="-16"
      inkscape:window-maximized="1"
-     inkscape:current-layer="surface21" />
+     inkscape:current-layer="svg9399" />
   <defs
      id="defs9401">
     <g
@@ -836,24 +836,6 @@
   </defs>
   <g
      id="surface21">
-    <rect
-       x="0"
-       y="0"
-       width="576"
-       height="432"
-       style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"
-       id="rect9700" />
-    <rect
-       x="0"
-       y="0"
-       width="576"
-       height="432"
-       style="fill:rgb(100%,100%,100%);fill-opacity:1;stroke:none;"
-       id="rect9702" />
-    <path
-       style="fill:none;stroke-width:1.066978;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(100%,100%,100%);stroke-opacity:1;stroke-miterlimit:10;"
-       d="M 0 432 L 576 432 L 576 0 L 0 0 Z M 0 432 "
-       id="path9704" />
     <g
        clip-path="url(#clip1)"
        clip-rule="nonzero"
@@ -5070,10 +5052,6 @@
          y="66.003906"
          id="use11052" />
     </g>
-    <path
-       style=" stroke:none;fill-rule:nonzero;fill:rgb(100%,100%,100%);fill-opacity:1;"
-       d="M 504.730469 164.203125 L 562.019531 164.203125 L 562.019531 108.945313 L 504.730469 108.945313 Z M 504.730469 164.203125 "
-       id="path11054" />
     <g
        style="fill:rgb(0%,0%,0%);fill-opacity:1;"
        id="g11056">
