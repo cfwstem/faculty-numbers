@@ -11,11 +11,12 @@ stemfacultyplot <- ggplot(data = stemfacultynums, aes(x = reorder(Department, fr
   scale_fill_manual(values = c("#754a7e","#2197A9")) +
   #scale_colour_brewer(palette = "Set2") +
   #scale_fill_brewer(palette = "Set2") +
-  geom_smooth(alpha = 0.6, size = 1.5)+
-  geom_point(size = 4, shape = 21, colour = "white") +
+  #geom_smooth(alpha = 0.6, size = 1.5)+
+  geom_line(size = 3.5, alpha = 0.8) +
+  geom_point(size = 7, shape = 21, colour = "white") +
   xlab("Departments") +
   ylab("Faculty Members") +
-  ggtitle("STEM Faculty by Gender at Tennessee-Knoxville") +
+  ggtitle("2015-2016 STEM Faculty by Gender at Tennessee-Knoxville") +
     theme(
       axis.text.y = element_text(color="#58595B", size = 20, vjust = 0.5),
       axis.text.x = element_text(color="#58595B", size = 10, vjust = 0.5, hjust = 1, angle = 70),
@@ -32,7 +33,7 @@ stemfacultyplot <- ggplot(data = stemfacultynums, aes(x = reorder(Department, fr
   )
 
 stemfacultyplot
-ggsave(filename = "plots/stemfacultybydepartmentplot.svg", plot = stemfacultyplot, width = 14, height = 6, units = "in")
+ggsave(filename = "plots/stemfacultybydepartmentplot-norange.svg", plot = stemfacultyplot, width = 8, height = 6, units = "in")
 
 ### men women non-stem stem aggregate ----
 facultybygenderplot <- ggplot(data = facultybygender, aes(x = Gender, y = freq, group = Designation, fill = Gender, colour = Gender))+
