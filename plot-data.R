@@ -19,7 +19,7 @@ stemfacultyplot <- ggplot(data = stemfacultynums, aes(x = Department, y = freq, 
   ggtitle("2015-2016 STEM Faculty by Gender at Tennessee-Knoxville") +
     theme(
       axis.text.y = element_text(color="#58595B", size = 20, vjust = 0.5),
-      axis.text.x = element_text(color="#58595B", size = 15, vjust = 0.5, hjust = 1, angle = 70),
+      axis.text.x = element_text(color="#58595B", size = 12, vjust = 0.5, hjust = 1, angle = 70),
       axis.title.y = element_text(color="#58595B", face = "bold", size = 20, vjust = 0.5, angle = 90),
       axis.title.x = element_text(color="#58595B", face = "bold", size = 20, vjust = 0.5),
       axis.ticks.y = element_line(color="#58595B", size = 2),
@@ -29,11 +29,12 @@ stemfacultyplot <- ggplot(data = stemfacultynums, aes(x = Department, y = freq, 
       #panel.border = element_rect(color="#58595B"),#element_blank(),
       panel.grid.major.x = element_line(color = "#A7A9AC", size = 0.5),
       panel.grid.major.y = element_line(color = "#A7A9AC", size = 0.5),
+      panel.grid.minor.y = element_blank(),
     legend.position = "right"
   )
 
 stemfacultyplot
-ggsave(filename = "plots/stemfacultybydepartmentplot-norange1.svg", plot = stemfacultyplot, width = 8, height = 6, units = "in")
+ggsave(filename = "plots/stemfacultybydepartmentplot.svg", plot = stemfacultyplot, width = 8, height = 7, units = "in")
 
 ### men women non-stem stem faculty by gender aggregate ----
 facultybygenderplot <- ggplot(data = facultybygender, aes(x = Gender, y = freq, group = Designation, fill = Gender, colour = Gender))+
@@ -77,9 +78,9 @@ facultytenurebygenderplot <- ggplot(data = facultytenurebygender, aes(x = Gender
   #scale_fill_brewer(palette = "Set2") +
   geom_bar(colour = "#58595b", stat = "identity") +
   facet_grid(.~Designation)+
-  xlab("Gender") +
+  xlab("") +
   ylab("Faculty Members") +
-  ggtitle("Non-STEM and STEM Tenured or Tenure Track Faculty at Tennessee-Knoxville") +
+  ggtitle("Tenured / Tenure-Track Faculty at Tennessee-Knoxville") +
   theme(
     axis.text.y = element_text(color="#58595B", size = 20, vjust = 0.5),
     axis.text.x = element_text(color="#58595B", size = 20, vjust = 0.5),
@@ -94,9 +95,9 @@ facultytenurebygenderplot <- ggplot(data = facultytenurebygender, aes(x = Gender
     
     plot.title = element_text(color="#58595B", face = "bold", size = 20, hjust = 0.5, vjust = 0),
     panel.background = element_blank(),
-    #panel.border = element_rect(color="#58595B"),#element_blank(),
-    panel.grid.major.x = element_line(color = "#A7A9AC", size = 0.5),
+    panel.grid.major.x = element_blank(),
     panel.grid.major.y = element_line(color = "#A7A9AC", size = 0.5),
+    panel.grid.minor.y = element_blank(),
     legend.position = "right"
   )
 
@@ -111,9 +112,9 @@ facultybypositionplot <- ggplot(data = facultybyposition, aes(x = Gender, y = fr
   scale_fill_manual(values = c("#754a7e","#2197A9")) +
   #scale_colour_brewer(palette = "Set2") +
   #scale_fill_brewer(palette = "Set2") +
-  geom_bar(colour = "#58595b", stat = "identity") +
+  geom_bar(colour = "#ffffff", stat = "identity") +
   facet_grid(Designation~Position_f)+
-  xlab("Gender") +
+  xlab("") +
   ylab("Faculty Members") +
   ggtitle("Non-STEM and STEM Faculty by Position at Tennessee-Knoxville") +
   theme(
@@ -133,6 +134,7 @@ facultybypositionplot <- ggplot(data = facultybyposition, aes(x = Gender, y = fr
     #panel.border = element_rect(color="#58595B"),#element_blank(),
     panel.grid.major.x = element_blank(),
     panel.grid.major.y = element_line(color = "#A7A9AC", size = 0.5),
+    panel.grid.minor.y = element_blank(),
     legend.position = "right"
   )
 
